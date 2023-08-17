@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ef64d6c291.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/jkjk.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="indext.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+<!-- About-->
+
+            <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="images/tot.png">
+                        </div>
+
+                        <div class="about-col-2">
+                            <h1 class="sub-title">About Me</h1>
+                            <p>I am Joemar Garcia, a passionate IT student with a deep-rooted connection to the world of technology. Born in 2002, technology has been an integral part of my life since childhood. From the very beginning, I found myself drawn to the wonders of the digital realm, sparking an insatiable curiosity that continues to drive my pursuit of knowledge in the field of Information Technology. As a dedicated learner, I am committed to honing my skills and understanding the intricacies of this dynamic discipline. With each passing day, I strive to expand my horizons, embrace emerging trends, and contribute meaningfully to the ever-evolving landscape of technology. My journey as an IT enthusiast is not just a pursuit of education; it is a lifelong passion that fuels my desire to innovate, create, and make a positive impact on the world through the power of technology.</p>
+
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>UI?UX</span><br>Designing Web Interface</li>
+                                    <li><span>Web Developtment</span><br>Web Developtment</li>
+                                    <li><span>App Developtment</span><br>Building Android/IOS Apps</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>2021</span><br>Bagger at SM HyperMarket</li>
+                                    <li><span>2022</span><br>App Developer</li>
+                                    <li><span>2023</span><br>Website Developer</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2006-2014</span><br>Mangaldan Central School</li>
+                                    <li><span>2014-2020</span><br>Mangaldan National High School</li>
+                                    <li><span>2021-2025</span><br>Phinma University of Pangasinan </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+           sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    
+</body>
+</html>

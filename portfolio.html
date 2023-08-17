@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ef64d6c291.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/jkjk.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="indext.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <!-- Portfolio-->
+            <div class="portfolio">
+                <div class="container"></div>
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/work1.jpg">
+                        <div class="layer">
+                            <h3>Food Generator App</h3>
+                            <p> This App Helps you think What food is best for you.</p>
+                        </div>
+                        
+                    </div>
+                    <div class="work">
+                        <img src="images/work2.png">
+                        <div class="layer">
+                            <h3>Food Ordering Website</h3>
+                            <p> This App lets you order the food even if you are home.</p>
+                        </div>
+                        
+                    </div>
+                    <div class="work">
+                        <img src="images/work3.png">
+                        <div class="layer">
+                            <h3>Portfolio</h3>
+                            <p> This Website is a Portfolio.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+           sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>
